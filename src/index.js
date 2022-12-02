@@ -12,12 +12,15 @@ function navbar() {
   const homeTab = document.createElement('button')
   homeTab.classList.add('tab')
   homeTab.innerText = 'Home'
+  homeTab.addEventListener('click', mainContent)
   const menuTab = document.createElement('button')
   menuTab.classList.add('tab')
   menuTab.innerText = 'Menu'
+  menuTab.addEventListener('click', mainContent)
   const contactTab = document.createElement('button')
   contactTab.classList.add('tab')
   contactTab.innerText = 'Contact'
+  contactTab.addEventListener('click', mainContent)
   tabs.appendChild(homeTab)
   tabs.appendChild(menuTab)
   tabs.appendChild(contactTab)
@@ -25,8 +28,12 @@ function navbar() {
   content.appendChild(nav)
 }
 
+function mainContent(e) {
+  console.log(e.currentTarget.innerText)
+}
+
 navbar()
 // Depending on which tab is selected render the page
-homePage()
-menuPage()
-contactPage()
+// homePage()
+// menuPage()
+// contactPage()
