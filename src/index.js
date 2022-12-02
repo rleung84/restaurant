@@ -1,6 +1,7 @@
 import homePage from "./pages/home";
 import menuPage from "./pages/menu";
 import contactPage from "./pages/contact";
+import './style.css';
 
 function navbar() {
   const content = document.querySelector('#content')
